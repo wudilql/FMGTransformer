@@ -7,9 +7,9 @@ def plot_prediction_results(y_true, y_pred):
     y_true = y_true.flatten()
     y_pred = y_pred.flatten()
 
-    fig, ax = plt.subplots(1, 1, figsize=(6, 6))  # 更合理比例：方形散点图
+    fig, ax = plt.subplots(1, 1, figsize=(6, 6))
 
-    # 散点图：预测 vs 真实值
+
     ax.scatter(y_true, y_pred, c='#1f77b4', label='Predicted',
                alpha=0.8, edgecolors='w', s=30)
     ax.plot([min(y_true), max(y_true)], [min(y_true), max(y_true)],
@@ -29,10 +29,6 @@ def plot_prediction_results(y_true, y_pred):
 
 
 def plot_loss_and_r2_curves(train_losses, train_r2_scores,  epochs, save_path=None):
-    """
-    绘制 Loss 曲线和 R² 曲线
-    """
-    # 1. 绘制 Loss 曲线
     plt.figure(figsize=(8, 6))
     plt.plot(range(1, epochs + 1), train_losses, label='Training Loss', color='blue')
     plt.xlabel('Epoch')
@@ -44,7 +40,6 @@ def plot_loss_and_r2_curves(train_losses, train_r2_scores,  epochs, save_path=No
         plt.savefig(f'{save_path}/loss_curve.png', dpi=300, bbox_inches='tight')
     plt.show()
 
-    # 2. 绘制 R² 曲线
     plt.figure(figsize=(8, 6))
     plt.plot(range(1, epochs + 1), train_r2_scores, label='Train R²', color='green')
     plt.xlabel('Epoch')
@@ -57,7 +52,6 @@ def plot_loss_and_r2_curves(train_losses, train_r2_scores,  epochs, save_path=No
     plt.show()
 
 
-#### 计算指标
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 import numpy as np
 
