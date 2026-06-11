@@ -15,3 +15,10 @@ The code is written in python. The implementation of the model relies on the fol
 - keras == 2.7.0  
 - matplotlib == 3.8.3
 
+# Future Work
+Some simple ideas:
+1.The input features can be further improved. In addition to the original variables such as temperature, pressure, feed ratio, and space velocity, more physically and chemically meaningful features can be constructed, such as reciprocal temperature, logarithmic pressure, estimated H2 partial pressure, temperature–pressure interaction terms, and residence-time-related proxy features. These features may help the model better capture the influence of reaction conditions on methanol yield.
+
+2.Chemical prior knowledge and reaction-mechanism constraints can be further introduced into the model. For example, a prior adjacency matrix can be constructed based on the relationships among features such as catalyst type, metal loading, promoter, support, surface area, temperature, pressure, and space velocity, and then used as an attention bias in the model. Meanwhile, constraint terms based on the main reaction of CO2 hydrogenation to methanol and possible side reactions can also be added to the attention mechanism or loss function, so that the prediction is guided not only by data fitting, but also by basic chemical principles.
+In short, the hope is to incorporate the chemical mechanism into the model.
+<img width="1277" height="1028" alt="image" src="https://github.com/user-attachments/assets/d175cd13-081b-4186-af19-2b373c74e245" />
