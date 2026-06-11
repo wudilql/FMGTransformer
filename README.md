@@ -21,4 +21,5 @@ Some simple ideas:
 
 2.Chemical prior knowledge and reaction-mechanism constraints can be further introduced into the model. For example, a prior adjacency matrix can be constructed based on the relationships among features such as catalyst type, metal loading, promoter, support, surface area, temperature, pressure, and space velocity, and then used as an attention bias in the model. Meanwhile, constraint terms based on the main reaction of CO2 hydrogenation to methanol and possible side reactions can also be added to the attention mechanism or loss function, so that the prediction is guided not only by data fitting, but also by basic chemical principles.
 In short, the hope is to incorporate the chemical mechanism into the model.
-<img width="1277" height="1028" alt="image" src="https://github.com/user-attachments/assets/d175cd13-081b-4186-af19-2b373c74e245" />
+<img width="1277" height="1028" alt="image" src="https://github.com/user-attachments/assets/2ee7b19f-94f6-4456-adb5-a37a62cbe4bc" />
+
